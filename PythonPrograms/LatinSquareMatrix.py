@@ -4,6 +4,6 @@ print(*l1)
 l2 = [0 for i in range(n)]
 for i in range(1,n):
     for j in range(n):
-        l2[j] = l1[(j+1)%n]
-    l1 = l2
-    print(*l1)
+        l2[j] = l1[(j+i)%n]
+
+    print(*l2)
