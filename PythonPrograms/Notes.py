@@ -14,7 +14,7 @@ if True:
     from collections import defaultdict
     dict1 = defaultdict(int) # Automatically handles missing keys
      
-     
+
 # To sort a dictionary by its values:
     l1 = sorted(dict1, key = dict1.get)[::-1] 
 
@@ -41,3 +41,9 @@ if True:
     union = a | b        # {1, 2, 3, 4}
     intersection = a & b # {2, 3}
     difference = a - b   # {1}
+
+# Binary to decimal and vice versa
+    binary = bin(10) # Gives binary value of 10 as a string with 0b prefix. 
+    bi = binary[2:] # To obtain only the binary numbers in the string
+
+    int("110", 2) # Converts the binary string into its corresponding decimal value
