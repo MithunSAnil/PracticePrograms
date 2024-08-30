@@ -9,7 +9,7 @@ def fibonacci(n, memo = {}):
         result = fibonacci(n-1) + fibonacci(n-2)
         memo[n] = result
         return result
-    
-n = int(input())
 
+
+n = int(input())
 print(fibonacci(n))
