@@ -14,6 +14,7 @@ if True:
     from collections import defaultdict
     dict1 = defaultdict(int) # Automatically handles missing keys
      
+     
 # To sort a dictionary by its values:
     l1 = sorted(dict1, key = dict1.get)[::-1] 
 
@@ -33,3 +34,10 @@ if True:
     import math
     math.gcd(48, 12)
     math.factorial(5)
+
+# Set operations
+    a = {1, 2, 3}
+    b = {2, 3, 4}
+    union = a | b        # {1, 2, 3, 4}
+    intersection = a & b # {2, 3}
+    difference = a - b   # {1}
