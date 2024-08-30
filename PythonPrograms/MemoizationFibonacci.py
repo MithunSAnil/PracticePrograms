@@ -11,4 +11,5 @@ def fibonacci(n, memo = {}):
         return result
     
 n = int(input())
+
 print(fibonacci(n))
