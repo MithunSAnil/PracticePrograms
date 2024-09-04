@@ -3,7 +3,7 @@ str1 = input()
 i = 0 
 j = len(str1) - 1
 
-l1 = [""] * len(str1)
+l1 = [" "] * len(str1)
 
 while j >= 0:
     l1[i] = str1[i]
@@ -11,6 +11,8 @@ while j >= 0:
 
     i += 1
     j -=1
-    print(*l1)
-    l1 = [""] * len(str1)
-    
+    for ele in l1:
+        print(ele, end = "")
+    print()
+    l1 = [" "] * len(str1)
+

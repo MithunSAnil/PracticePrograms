@@ -47,3 +47,6 @@ if True:
     bi = binary[2:] # To obtain only the binary numbers in the string
 
     int("110", 2) # Converts the binary string into its corresponding decimal value
+
+# For initialising a matrix
+    mat1 = [[None]*n for _ in range(n)]
