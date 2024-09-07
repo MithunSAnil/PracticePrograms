@@ -50,3 +50,13 @@ if True:
 
 # For initialising a matrix
     mat1 = [[None]*n for _ in range(n)]
+
+# Permutation and combination
+
+    import itertools
+    l1 = [1, 2, 3]
+    l2 = list(itertools.permutations(l1))
+    l2 = list(itertools.combinations(l1, c))
+
+# Sort dictionary by items
+    s = dict(sorted(my_dict.items()))
