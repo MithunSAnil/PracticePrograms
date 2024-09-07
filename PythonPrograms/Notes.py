@@ -60,3 +60,11 @@ if True:
 
 # Sort dictionary by items
     s = dict(sorted(my_dict.items()))
+
+# Heap opeations
+    # Python only has minheap by default. So push negative of the numbers to get the maxheap
+    import heapq
+    minHeap = []
+    heapq.heappush(minHeap, value) # To push element to minheap
+    heapq.heappop(minHeap) # To pop minimum element from the minheap
+    heapq.heapify(list1) # Converts list to minheap
