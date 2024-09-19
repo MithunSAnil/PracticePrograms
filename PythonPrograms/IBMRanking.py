@@ -1,5 +1,5 @@
-strArr =  input().split()
-arr = [int(x) for x in strArr]
+arr = list(map(int, input().split()))
+
 cnt = 0
 arr.sort()
 arr = arr[::-1]
