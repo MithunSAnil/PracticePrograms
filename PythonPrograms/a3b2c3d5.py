@@ -1,3 +1,5 @@
+# Prints aaaaabbbcc for sample input a5b3c2
+
 from collections import defaultdict
 
 dict1 = defaultdict(str)
