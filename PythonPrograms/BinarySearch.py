@@ -1,4 +1,4 @@
-arr = eval(input())
+arr = [int(n) for n in input().split()]
 target = int(input())
 
 high = len(arr) - 1
