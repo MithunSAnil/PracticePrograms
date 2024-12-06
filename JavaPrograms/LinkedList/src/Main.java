@@ -31,6 +31,40 @@ class LinkedList
         }
     }
 
+    public void deleteNode()
+    {
+        if(head.next == null)
+        {
+            head = null;
+        }
+        else
+        {
+            Node temp = head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
+
+    }
+
+    public void reverse()
+    {
+        Node curr = head.next;
+        Node prev = head;
+        Node temp = curr;
+        while(curr != null)
+        {
+            curr = curr.next;
+            temp.next = prev;
+            prev = temp;
+            temp = curr;
+        }
+        head.next = null;
+        head = prev;
+    }
+
     public void display()
     {
         Node temp = head;
@@ -44,22 +78,35 @@ class LinkedList
 }
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
         LinkedList linkedList = new LinkedList();
         while(true)
         {
-            System.out.println("Enter the node value");
-            Scanner sc = new Scanner(System.in);
-            int val = sc.nextInt();
-            sc.nextLine(); // To prevent from reading the leftover newline from the nextInt() function
-            linkedList.addNode(val);
-            System.out.println("Do you want to add more(y/n))");
-            String choice = sc.nextLine().trim();
-            if(choice.equals("n"))
+            System.out.println("Menu:\n1:Add Node\n2:Delete Node\n3:Reverse\n4:Display\n5:Exit");
+            int choice = sc.nextInt();
+            switch(choice)
             {
-                break;
+                case 1:
+                    System.out.println("Enter the node value");
+                    int val = sc.nextInt();
+                    linkedList.addNode(val);
+                    break;
+                case 2:
+                    linkedList.deleteNode();
+                    break;
+                case 3:
+                    linkedList.reverse();
+                    break;
+                case 4:
+                    linkedList.display();
+                    break;
+                case 5:
+                    sc.close();
+                    System.exit(0);
             }
         }
-        linkedList.display();
+
     }
 }
